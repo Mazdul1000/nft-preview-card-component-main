@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | NFT preview card component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+    *{
+      margin: 0;
+      padding: 0;
+    }
+    body{
+      background-color: hsl(217, 54%, 11%);
+      font-family: 'Outfit', sans-serif;
+   
+    }
+    .main{
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     height: 100vh;
+    
+    }
+
+.card{
+   max-width: 270px;
+      display: flex;
+      justify-content: center;
+      border-radius: 10px;
+      flex-direction: column;
+      margin: auto;
+      background-color: hsl(216, 50%, 16%); 
+     padding: 15px;
+     box-shadow: 0px 1px 100px hsl(215, 63%, 5%);
+}
+
+    .card-image img{
+      height: 100%;
+      width: 100%;
+      margin: 0 auto;
+      border-radius: 10px;
+   
+      
+    }
+.card-image{
+  margin: 0 auto;
+  position: relative;
+  height: 250px;
+  width: 250px;
+ 
+}
+  
+.card-image .overlay{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height:100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 255, 255, 0.342);
+  border-radius: 10px;
+  opacity: 0;
+  transition-duration: 1s;
+}
+
+.overlay:hover{
+ 
+  opacity: 1;
+  
+}
+
+.overlay img{
+  height: 40px;
+  width: 40px;
+}
+
+
+    .card h3{
+       margin: 15px 0;
+       color: #fff;
+       transition: 0.5s;
+       
+    }
+
+    .card h3:hover{
+      color: cyan;
+    }
+
+    .card > p{
+      color: hsl(215, 51%, 70%);
+      margin-bottom: 15px;
+    }
+  .card h3,
+  .card> p,
+  .price{
+    padding-left: 10px;
+  }
+  
+   .price{
+     width: 100%;
+     display: flex;
+     justify-content: space-between;
+     margin-bottom: 15px;
+     padding-right: 5px;
+   }
+   .price>div{
+     display: flex;
+     gap: 0 5px;
+   }
+    .price img{
+      width: 20px;
+      height: 20px;
+    }
+
+    
+
+    .price .eth p{
+    color:hsl(178, 100%, 50%);
+    }
+
+    .price .time p{
+      color: hsl(215, 51%, 70%);
+    }
+
+    hr{
+      width: 90%;
+      color: hsl(215, 51%, 70%);
+      margin: 15px auto;
+    }
+   .credit{
+     align-self: center;
+
+   }
+    .credit p{
+      color:hsl(215, 51%, 70%);
+    }
+    .credit a{
+      text-decoration: none;
+      color: #fff;
+      margin-left: 5px;
+      transition: 0.4s;
+    }
+    .credit a:hover{
+      color: cyan;
+    }
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: cyan; }
+    .attribution {
+      color: hsl(215, 51%, 70%);
+    }
+  </style>
+</head>
+<body>
+<div class="main">
+   <div class="card">
+    
+    
+    <div class="card-image"><img src="images/image-equilibrium.jpg" alt="">
+    <div class="overlay">
+      <img src="images/icon-view.svg" alt="">
+    </div>
+    </div>
+    
+    <h3>Equilibrium #3429</h3> 
+ <p> Our Equilibrium collection promotes balance and calm.</p>
+  
+ <div class="price">
+   <div class="eth"><img src="images/icon-ethereum.svg" alt=""><p> 0.041 ETH</p></div>
+   <div class="time"><img src="images/icon-clock.svg" alt=""><p> 3 days left</p></div>
+ </div>
+ <hr>
+ <div class="credit"><p>Creation of<a href=""> Jules Wyvern</a></p></div>  
+  
+ </div>
+   </div>
+    
+<div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Mazdul Prodhan</a>.
+  </div>
+</body>
+</html>
